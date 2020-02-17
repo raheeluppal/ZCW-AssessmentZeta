@@ -35,13 +35,18 @@ public class ArrayUtils {
 
 
         Integer count = 0;
-
         Object[] result = new Object[objectArray.length - count];
+
 
         for (Integer i = 0; i < objectArray.length; i++) {
             if (objectArray[i] == objectToRemove) {
                 count++;
-                result[i] = objectArray[i];
+
+            }
+            for (int j = 0; j < objectArray.length; j++) {
+                if(objectArray[j] != objectToRemove){
+                    result[j] = objectArray[j];
+                }
 
             }
         }
