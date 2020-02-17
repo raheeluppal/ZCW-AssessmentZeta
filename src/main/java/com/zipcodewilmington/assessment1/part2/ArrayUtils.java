@@ -34,14 +34,14 @@ public class ArrayUtils {
     public static Object[] removeValue(Object[] objectArray, Object objectToRemove) {
 
 
-        int count = 0;
+        Integer count = 0;
 
         Object[] result = new Object[objectArray.length - count];
 
-        for (int i = 0; i < objectArray.length; i++) {
+        for (Integer i = 0; i < objectArray.length; i++) {
             if (objectArray[i] == objectToRemove) {
                 count++;
-                result[i] = i;
+                result[i] = objectArray[i];
 
             }
         }
@@ -74,13 +74,7 @@ public class ArrayUtils {
      * given two arrays `objectArray` and `objectArrayToAdd`, return an array containing all elements in `objectArray` and `objectArrayToAdd`
      */
     public static Object[] mergeArrays(Object[] objectArray, Object[] objectArrayToAdd) {
-      //  Object[] result = new Object[objectArray.length+objectArrayToAdd.length];
 
-        return Stream.concat(Arrays.stream(objectArray),
-                Arrays.stream(objectArrayToAdd))
-                .toArray();
-
-        // return  result;
+        return null;
     }
-
 }
